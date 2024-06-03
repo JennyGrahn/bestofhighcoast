@@ -21,5 +21,12 @@ from myapp import views as myapp_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', myapp_views.index, name='index'),
+    path('', myapp_views.about, name='about'),
+    path('', myapp_views.card, name='destinations'),
+    path('', myapp_views.favourites, name='favourite lists'),
+    path('', myapp_views.mbrpages, name='member pages'),
+    path('', myapp_views.signin, name='sign in'),
+    path('', myapp_views.submitplc, name='submit a new destination'),
+    path('', myapp_views.index, name='home'),
+    
 ]
