@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
+
 
 <html lang="en">
 
@@ -10,9 +10,10 @@
     <!--Bootstrap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="sts" type="text/css" href="{% static 'assets/css/about.css' %}">
     <title>Home | Best of High Coast</title>
 </head>
+{% load static %}
 
 <body>
     <header>
@@ -24,12 +25,13 @@
                 Menu
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="index.html">Home</a>
-                <a class="dropdown-item" href="card.html">Destinations</a>
-                <a class="dropdown-item" href="signin.html">Log in</a>
-                <a class="dropdown-item" href="submitplc.html">Submit a new place place</a>
-                <a class="dropdown-item" href="mbrpages.html">Memberpages</a>
-                <a class="dropdown-item" href="about.html">About</a>
+                <a class="dropdown-item" href="{% url 'home' %}">Home</a>
+                <a class="dropdown-item" href="{% url 'card' %}">Destinations</a>
+                <a class="dropdown-item" href="{% url 'signin' %}">Log in</a>
+                <a class="dropdown-item" href="{% url 'submitplc' %}">Submit a new place place</a>
+                <a class="dropdown-item" href="{% url 'mbrpages' %}">Memberpages</a>
+                <a class="dropdown-item" href="{% url 'about' %}">About</a>
+                <a class="dropdown-item" href="{% url 'favourites' %}">Favourites</a>
             </div>
         </div>
     </header>

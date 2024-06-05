@@ -27,9 +27,6 @@ def favourites(request):
 def submitplc(request):
     return(request, 'submitplc.html')
 
-#View for card
-def card(request):
-    return(request, 'card.html')
 
 #View for sign in
 def signin(request):

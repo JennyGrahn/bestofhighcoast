@@ -81,9 +81,10 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '3306', # You can omit this if you're using a UNIX socket
     }
 }
+
 
 
 # Password validation
